@@ -26,7 +26,7 @@ Ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/business-forecasting-tool.git
+   git clone https://github.com/Fatumayattani/business_forecasting_tool.git
    cd business-forecasting-tool
    ```
 
