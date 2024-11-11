@@ -38,7 +38,6 @@ Ensure you have the following installed:
 3. Set up your Gemini API keys. Create a `.env` file in the root of the project and add the following:
    ```plaintext
    GEMINI_API_KEY=your_api_key_here
-   GEMINI_API_SECRET=your_api_secret_here
    ```
 
 4. Run the application:
@@ -95,6 +94,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions or issues, feel free to open an issue on the repository or contact us directly at [your-email@example.com].
+For questions or issues, feel free to open an issue on the repository
 
 ```
