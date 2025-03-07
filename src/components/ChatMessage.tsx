@@ -6,13 +6,14 @@ interface ChatMessageProps {
   message: Message;
 }
 
-// Cleanup function to remove markdown formatting
+// Cleanup function to format AI response properly
 function cleanContent(content: string) {
-  // Remove bold markdown (**)
-  let cleaned = content.replace(/\*\*/g, '');
-  // Convert bullet points (*) to hyphens
-  cleaned = cleaned.replace(/^\*(\s+)/gm, '-$1');
-  return cleaned;
+  return content
+    .replace(/\*\*/g, '') // Remove bold markdown (**)
+    .replace(/(?:^|\n)\s*-\s*/g, ' ') // Remove list dashes (-) and newlines
+    .replace(/(?:^|\n)\s*\*\s*/g, ' ') // Remove bullet points (*)
+    .replace(/\n+/g, ' ') // Convert multiple newlines into spaces
+    .trim(); // Trim extra spaces
 }
 
 export function ChatMessage({ message }: ChatMessageProps) {
@@ -35,9 +36,9 @@ export function ChatMessage({ message }: ChatMessageProps) {
         <div className="font-medium text-sm text-gray-500 mb-1">
           {isBot ? 'AI Assistant' : 'You'}
         </div>
-        <div className="prose prose-sm max-w-none">
+        <p className="prose prose-sm max-w-none">
           {cleanContent(message.content)}
-        </div>
+        </p>
       </div>
     </div>
   );
