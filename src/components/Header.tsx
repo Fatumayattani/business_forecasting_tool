@@ -3,7 +3,7 @@ import { LineChart, TrendingUp, BarChart } from 'lucide-react';
 
 export function Header() {
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6 px-4">
+    <header className="bg-gradient-to-r from-blue-600 to-brown-800 text-white py-6 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
           <TrendingUp className="w-8 h-8" />

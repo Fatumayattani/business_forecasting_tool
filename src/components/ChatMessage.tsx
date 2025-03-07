@@ -6,6 +6,15 @@ interface ChatMessageProps {
   message: Message;
 }
 
+// Cleanup function to remove markdown formatting
+function cleanContent(content: string) {
+  // Remove bold markdown (**)
+  let cleaned = content.replace(/\*\*/g, '');
+  // Convert bullet points (*) to hyphens
+  cleaned = cleaned.replace(/^\*(\s+)/gm, '-$1');
+  return cleaned;
+}
+
 export function ChatMessage({ message }: ChatMessageProps) {
   const isBot = message.role === 'assistant';
 
@@ -27,7 +36,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
           {isBot ? 'AI Assistant' : 'You'}
         </div>
         <div className="prose prose-sm max-w-none">
-          {message.content}
+          {cleanContent(message.content)}
         </div>
       </div>
     </div>
