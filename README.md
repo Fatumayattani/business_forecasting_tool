@@ -2,6 +2,9 @@
 
 Welcome to the **Business Forecasting Tool**! This platform helps businesses analyze and forecast various key metrics such as revenue, sales, expenses, market trends, and more. By leveraging advanced predictive analytics and real-time data from Gemini API, this tool provides valuable insights to guide your business decisions.
 
+![Alt text](src/assets/bt.png)
+
+
 ## Features
 
 - **Revenue and Profitability Forecasting:** Get accurate predictions of your revenue and profit margins for upcoming months and years.
